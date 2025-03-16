@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="shop-styles.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Stint+Ultra+Expanded" rel="stylesheet">
+    <title>Контакты</title>
+
+</head>
+<body>
+    <header>
+    
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                 <li><a href="about.html">Информация о компании</a></li>
+                <li><a href="services.html">Товары и услуги</a></li>
+                <li><a href="blog.html">Акции</a></li>
+                <li><a href="contact.html">Контактная информация</a></li>
+            </ul>
+        </nav>
+        <h1>Контакты</h1>
+    </header>
+    <main>
+       <form id="feedbackForm">
+
+        <fieldset>
+            <legend>Свяжитесь с нами</legend>
+       
+                <ul>
+                    <li> <label for="name">Имя:</label>
+            <input type="text" id="name" name="name" required> </li>
+                    <li><label for="email">Электронная почта:</label>
+            <input type="email" id="email" name="email" required> </li>
+                    <li><label for="phone">Телефон:</label>
+            <input type="tel" id="phone" name="phone"> </li>
+                    <li> <label for="subject">Тема:</label>
+            <select id="subject" name="subject" required>   
+                <option value="">Выберите тему</option>
+                <option value="question">Вопрос</option>
+                <option value="feedback">Отзыв</option>
+                <option value="other">Другое</option>
+            </select></li>
+                    <li> <label for="message">Сообщение:</label>
+            <textarea id="message" name="message" required></textarea> 
+            <li>  <button type="submit">Отправить</button></li></li>
+          
+                </ul>
+        
+        </fieldset>
+        </form>
+        <div id="confirmationMessage" style="display:none;">Спасибо за ваше сообщение! Мы свяжемся с вами в ближайшее время.</div>
+    </main>
+    <footer>
+        &copy; 2025, Иголочка
+        <br>
+        Все товарные знаки и зарегистрированные товарные знаки, представленные на этом сайте, являются собственностью их владельцев.
+      </footer>
+    <script>
+        document.getElementById('feedbackForm').onsubmit = function(event) {
+            event.preventDefault();
+            document.getElementById('confirmationMessage').style.display = 'block';
+            this.reset();
+        };
+    </script>
+</body>
+</html>
